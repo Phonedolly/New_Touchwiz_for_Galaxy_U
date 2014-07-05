@@ -1,0 +1,17 @@
+ui_print("Galaxy U Deodex ROM");
+ui_print("By Phonedollly");
+ui_print("Delete System Apps");
+delete_recursive("system/app");
+ui_print("Complate delete System apps!!");
+ui_print("Delete Framework");
+delete_recursive("system/framework");
+ui_print("Complate delete Framework");
+ui_print("Package extract dir. please wait...");
+package_extract_dir("system", "/system");
+ui_print("Complate Package extract files");
+ui_print("Set Permissions System Apps");
+set_perm_recursive(0, 0, 0755, 0644, "/system/app");
+ui_print("Set Permissions Framework");
+set_perm_recursive(0, 0, 0755, 0644, "/system/framework");
+ui_print("Finished");
+ui_print("Thanks");
